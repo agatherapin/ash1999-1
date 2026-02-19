@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ash1999 - Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/ash logo 1.png" alt="ash1999">
+        </div>
+
+        <!-- FILTER MENU -->
+        <div class="filter-wrapper">
+            <button class="filter-toggle" id="filterToggle">Filters</button>
+            <div class="filter-container" id="filterContainer">
+                <button class="filter-btn active" data-filter="all">All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="instructions">
+        SCROLL/DRAG TO MOVE · CLICK TO FLIP
+    </div>
+
+    <!-- MAIN CANVAS -->
+    <div class="main-container">
+        <div class="scroll-container" id="scrollContainer">
+            <div class="canvas" id="canvas"></div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+
+</body>
+</html>
