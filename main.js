@@ -207,8 +207,8 @@ let activeFilters = new Set(['all']);
 // On desktop the factor is 1 (no change). On phone it goes down to ~0.6
 function getCardScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 0.85;
-    if (w <= 768) return 0.9;
+    if (w <= 480) return 0.75;   // téléphone — cartes bien visibles
+    if (w <= 768) return 0.85;   // tablette
     return 1;
 }
 
@@ -216,8 +216,8 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function getCanvasScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 1.8;   // mobile : espace 2.5× plus grand
-    if (w <= 768) return 1.8;   // tablette : espace 1.8× plus grand
+    if (w <= 480) return 2.2;    // mobile : beaucoup d'espace pour éviter les chevauchements
+    if (w <= 768) return 1.8;    // tablette
     return 1;
 }
 
