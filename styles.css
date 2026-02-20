@@ -642,14 +642,22 @@ body {
         font-size: 12px;
     }
 
-        .instructions {
-            font-size: 11px;
-            /* était 16px */
-            padding: 8px 14px;
-            bottom: 12px;
-            white-space: nowrap;
-            /* empêche le retour à la ligne */
-    }
+ .instructions {
+     position: fixed;
+     bottom: 24px;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 100;
+     padding: 12px 24px;
+     border-radius: 30px;
+     font-size: 12px;
+     font-weight: 400;
+     background-color: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(10px);
+     pointer-events: none;
+     letter-spacing: -0.02em;
+     mix-blend-mode: difference;
+ }
 
     /* Cards back face */
     .back-title {
