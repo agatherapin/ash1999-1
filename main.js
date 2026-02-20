@@ -9,8 +9,8 @@ const projects = [
         // Note: fullDescription is defined here but not currently used
         fullDescription: 'Ce projet explore la typographie moderne à travers un glossaire complet. Chaque terme est illustré avec des exemples visuels et des explications détaillées pour faciliter la compréhension.',
         tags: ['Branding'],
-        image: 'img/rare stage/back-scan-couture.webp',
-        gallery: ['img/rare stage/Print rapport-6.webp', 'img/rare stage/Print rapport-5.webp', 'img/rare stage/Print rapport-11.webp', 'img/rare stage/Print rapport-13.webp', 'img/rare stage/Print rapport-9.webp', 'img/rare stage/tee noir rare stretch.webp'],
+        image: 'img/rare stage/back-scan-couture.jpg',
+        gallery: ['img/rare stage/Print rapport-6.jpg', 'img/rare stage/Print rapport-5.jpg', 'img/rare stage/Print rapport-11.jpg', 'img/rare stage/Print rapport-13.jpg', 'img/rare stage/Print rapport-9.jpg', 'img/rare stage/tee noir rare stretch.jpg'],
         width: 240,
         aspectRatio: 0.7,
         top: 45,
@@ -21,8 +21,8 @@ const projects = [
         subtitle: 'Jan 2024',
         description: 'Trifold brochure to promote a fictional festival around rap music. Suburban is the name of a fictitious organization about urban culture, streetwear & rap music.',
         tags: ['Branding', 'Print', 'Typography'],
-        image: 'img/2.webp',
-        gallery: ['img/exterieur-mockup-suburban.jpg.webp', 'img/interieur-mockup-suburban.webp', 'img/Logo Suburban.webp'],
+        image: 'img/2.gif',
+        gallery: ['img/exterieur-mockup-suburban.jpg.jpg', 'img/interieur-mockup-suburban.jpg', 'img/Logo Suburban.png'],
         width: 240,
         aspectRatio: 0.8,
         top: 8,
@@ -33,8 +33,8 @@ const projects = [
         subtitle: 'Jan 2024',
         description: 'Inspired by Copperlate alphabet',
         tags: ['Typography'],
-        image: 'img/HBD texture.webp',
-        gallery: ['img/HBD texture.webp', 'img/HBD Original.webp'],
+        image: 'img/HBD texture.jpg',
+        gallery: ['img/HBD texture.jpg', 'img/HBD Original.jpg'],
         width: 280,
         aspectRatio: 1,
         top: 80,
@@ -45,8 +45,8 @@ const projects = [
         subtitle: 'June 2024',
         description: 'As a great fan of Dieter Rams work, I decided to dedicate this webdesign project to the wall unit he designed for Braun in the 60s.',
         tags: ['Web Design'],
-        image: 'img/wandanlage/wandanlage 1.webp',
-        gallery: ['vimeo:1166411109', 'img/wandanlage/3.webp', 'img/wandanlage/4.webp', 'img/wandanlage/5.webp'],
+        image: 'img/wandanlage/wandanlage 1.png',
+        gallery: ['vimeo:1166411109', 'img/wandanlage/3.png', 'img/wandanlage/4.png', 'img/wandanlage/5.png'],
         width: 340,
         aspectRatio: 1.7,
         top: 65,
@@ -57,8 +57,8 @@ const projects = [
         subtitle: 'April 2025',
         description: 'The aim of this workshop was to create a brand new, fun and attractive design for this extraordinary game!',
         tags: ['Packaging', 'Branding', 'Print'],
-        image: 'img/skyjo/skyjo 2.webp',
-        gallery: ['img/skyjo/cartes.webp', 'img/skyjo/exterieur.webp', 'img/skyjo/full.webp', 'img/skyjo/boite.webp'],
+        image: 'img/skyjo/skyjo 2.jpg',
+        gallery: ['img/skyjo/cartes.jpg', 'img/skyjo/exterieur.jpg', 'img/skyjo/full.jpg', 'img/skyjo/boite.jpg'],
         width: 240,
         aspectRatio: 0.8,
         top: 55,
@@ -69,8 +69,8 @@ const projects = [
         subtitle: 'November 2024',
         description: 'The Interférences exhibition revolves around mapping and motion design, and showcases the work of third-year motion design students at E-artsup.',
         tags: ['Branding', 'Print', 'Motion Design'],
-        image: 'img/gif interférences.webp',
-        gallery: ['img/interférences 1.webp', 'img/flyer face interférences.webp', 'img/flyer verso interférences.webp'],
+        image: 'img/gif interférences.gif',
+        gallery: ['img/interférences 1.jpg', 'img/flyer face interférences.jpg', 'img/flyer verso interférences.jpg'],
         width: 240,
         aspectRatio: 0.7,
         top: 17,
@@ -81,15 +81,15 @@ const projects = [
         subtitle: 'October 2023',
         description: 'This lexicon is designed to help students learn about typography. It covers the essentials of typographic vocabulary and technical terms, and traces the history of typefaces.',
         tags: ['Typography', 'Print'],
-        image: 'img/lexique typo/sub-2 (1).webp',
+        image: 'img/lexique typo/sub-2 (1).jpg',
         gallery: [
-            'img/lexique typo/sub-2 (1).webp', 'img/lexique typo/lexique-typo.webp',
-            'img/lexique typo/lexique-typo-1.webp', 'img/lexique typo/lexique-typo-2.webp',
-            'img/lexique typo/lexique-typo-3.webp', 'img/lexique typo/lexique-typo-4.webp',
-            'img/lexique typo/lexique-typo-5.webp', 'img/lexique typo/lexique-typo-6.webp',
-            'img/lexique typo/lexique-typo-7.webp', 'img/lexique typo/lexique-typo-8.webp',
-            'img/lexique typo/lexique-typo-9.webp', 'img/lexique typo/lexique-typo-10.webp',
-            'img/lexique typo/lexique-typo-12.webp', 'img/lexique typo/lexique-typo-15.webp'
+            'img/lexique typo/sub-2 (1).jpg', 'img/lexique typo/lexique-typo.jpg',
+            'img/lexique typo/lexique-typo-1.jpg', 'img/lexique typo/lexique-typo-2.jpg',
+            'img/lexique typo/lexique-typo-3.jpg', 'img/lexique typo/lexique-typo-4.jpg',
+            'img/lexique typo/lexique-typo-5.jpg', 'img/lexique typo/lexique-typo-6.jpg',
+            'img/lexique typo/lexique-typo-7.jpg', 'img/lexique typo/lexique-typo-8.jpg',
+            'img/lexique typo/lexique-typo-9.jpg', 'img/lexique typo/lexique-typo-10.jpg',
+            'img/lexique typo/lexique-typo-12.jpg', 'img/lexique typo/lexique-typo-15.jpg'
         ],
         width: 340,
         aspectRatio: 1.3,
@@ -101,8 +101,8 @@ const projects = [
         subtitle: 'December 2025',
         description: 'Fictional cover made with playdough for the amazing song pick your poison, by Killowen.',
         tags: ['Music', 'Mix media', 'Typography'],
-        image: 'img/pick your poison 1.webp',
-        gallery: ['img/pick your poison 1.webp', 'img/head 1.webp', 'img/head 2.webp'],
+        image: 'img/pick your poison 1.jpg',
+        gallery: ['img/pick your poison 1.jpg', 'img/head 1.png', 'img/head 2.png'],
         width: 330,
         aspectRatio: 1.0,
         top: 87,
@@ -113,8 +113,8 @@ const projects = [
         subtitle: '2024',
         description: 'Using Carta Nueva font from Sharp Type',
         tags: ['Music'],
-        image: 'img/Bushi Batman.webp',
-        gallery: ['img/mockup CD.webp', 'img/Bushi Batman.webp'],
+        image: 'img/Bushi Batman.jpg',
+        gallery: ['img/mockup CD.jpg', 'img/Bushi Batman.jpg'],
         width: 240,
         aspectRatio: 0.707,
         top: 32,
@@ -125,12 +125,12 @@ const projects = [
         subtitle: '2024',
         description: 'Collection de travaux et dessins variés.',
         tags: ['Illustration'],
-        image: 'img/dessins/astronaute.webp',
+        image: 'img/dessins/astronaute.jpg',
         gallery: [
-            'img/dessins/00000001 3.webp', 'img/dessins/001-2.webp',
-            'img/dessins/00000001.webp', 'img/dessins/007-2.webp',
-            'img/dessins/Déc. 23 Profil encre de chine.webp', 'img/dessins/portrait samouraï 2.webp',
-            'img/dessins/IMG_8577 2.webp'
+            'img/dessins/00000001 3.jpg', 'img/dessins/001-2.jpg',
+            'img/dessins/00000001.jpg', 'img/dessins/007-2.jpg',
+            'img/dessins/Déc. 23 Profil encre de chine.jpg', 'img/dessins/portrait samouraï 2.jpg',
+            'img/dessins/IMG_8577 2.jpg'
         ],
         width: 240,
         aspectRatio: 0.707,
@@ -142,8 +142,8 @@ const projects = [
         subtitle: 'November 2025',
         description: 'I crafted this paper myself from scratch and painted the cover with acrylic paint. Everything is made by hand.',
         tags: ['Mix media', 'Illustration'],
-        image: 'img/Early dinner front.webp',
-        gallery: ['img/Early dinner front.webp', 'img/Early dinner back.webp'],
+        image: 'img/Early dinner front.png',
+        gallery: ['img/Early dinner front.png', 'img/Early dinner back.png'],
         width: 290,
         aspectRatio: 1.3,
         top: 20,
@@ -154,7 +154,7 @@ const projects = [
         subtitle: 'December 2025',
         description: 'Short video to promote the Wall Mounted CD Player from Muji.',
         tags: ['Motion Design'],
-        image: 'img/motion thumbnail.webp',
+        image: 'img/motion thumbnail.gif',
         gallery: ['video:img/RAPIN_AGATHE_MOTION.mp4'],
         width: 290,
         aspectRatio: 1.5,
@@ -216,7 +216,7 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function getCanvasScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 1.8;    // mobile : beaucoup d'espace pour éviter les chevauchements
+    if (w <= 480) return 2.2;    // mobile : beaucoup d'espace pour éviter les chevauchements
     if (w <= 768) return 1.8;    // tablette
     return 1;
 }
@@ -304,9 +304,12 @@ function filterItems() {
 // =============================================
 function createItems() {
     const scale = getCardScale();
+    
+    // Sur mobile : 4 tiles (2×2) au lieu de 9 (3×3) = moitié moins d'éléments DOM
+    const tileRange = isTouchDevice ? { min: 0, max: 1 } : { min: -1, max: 1 };
 
-    for (let tileY = -1; tileY <= 1; tileY++) {
-        for (let tileX = -1; tileX <= 1; tileX++) {
+    for (let tileY = tileRange.min; tileY <= tileRange.max; tileY++) {
+        for (let tileX = tileRange.min; tileX <= tileRange.max; tileX++) {
             projects.forEach((project, index) => {
                 const item = document.createElement('div');
                 item.className = 'item';

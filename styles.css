@@ -7,11 +7,21 @@
     box-sizing: border-box;
 }
 
+html {
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
 body {
     font-family: "neue-haas-grotesk-display", sans-serif;
     overflow: hidden;
     background-color: #000000;
     color: #fff;
+    overscroll-behavior: none; /* Empêche le pull-to-refresh du navigateur */
+    -webkit-overflow-scrolling: none;
+    position: fixed; /* Empêche tout scroll natif de la page */
+    width: 100%;
+    height: 100%;
 }
 
 /* =============================================
