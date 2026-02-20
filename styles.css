@@ -648,13 +648,13 @@ body {
             padding: 8px 14px;
             bottom: 12px;
             white-space: nowrap;
-            /* empêche le retour à la ligne */
+            mix-blend-mode: normal;
         }
     }
 
     /* Cards back face */
     .back-title {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .back-description {
@@ -663,11 +663,11 @@ body {
 
     .view-more-btn {
         font-size: 16px;
-        padding: 4px;
+        padding: 6px;
     }
 
     .card-back {
-        padding: 10px 12px;
+        padding: 12px 14px;
     }
 
     /* Modal */
