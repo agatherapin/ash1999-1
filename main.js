@@ -207,7 +207,7 @@ let activeFilters = new Set(['all']);
 // On desktop the factor is 1 (no change). On phone it goes down to ~0.6
 function getCardScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 0.4;
+    if (w <= 480) return 0.55;
     if (w <= 768) return 0.55;
     return 1;
 }
