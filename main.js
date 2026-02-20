@@ -330,7 +330,7 @@ function createItems() {
                     <div class="item-card" style="aspect-ratio: ${project.aspectRatio};">
                         <div class="card-face card-front">
                             <div class="item-image">
-                                <img src="${project.image}" alt="${project.title}">
+                                <img src="${project.image}" alt="${project.title}" loading="lazy">
                                 <div class="overlay">
                                     <h3>${project.title}</h3>
                                     <div class="date">${project.subtitle}</div>
@@ -601,7 +601,7 @@ function openModal(project) {
             </video>
         </div>`;
     } else {
-        return `<div class="modal-gallery-item"><img src="${item}" alt="${project.title}"></div>`;
+        return `<div class="modal-gallery-item"><img src="${item}" alt="${project.title}" loading="lazy"></div>`;
     }
 }).join('') : '';
 
