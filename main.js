@@ -195,6 +195,17 @@ let currentMouseX = 0;
 let currentMouseY = 0;
 let activeFilters = new Set(['all']);
 
+// Responsive: scale cards down on smaller screens
+// On desktop the factor is 1 (no change). On phone it goes down to ~0.6
+function getCardScale() {
+    const w = window.innerWidth;
+    if (w <= 480) return 0.50;
+    if (w <= 768) return 0.55;
+    return 1;
+}
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 const TILE_WIDTH = window.innerWidth + 300;
 const TILE_HEIGHT = window.innerHeight + 300;
 
@@ -276,14 +287,17 @@ function filterItems() {
 // CANVAS ITEMS
 // =============================================
 function createItems() {
+    const scale = getCardScale();
+
     for (let tileY = -1; tileY <= 1; tileY++) {
         for (let tileX = -1; tileX <= 1; tileX++) {
             projects.forEach((project, index) => {
                 const item = document.createElement('div');
                 item.className = 'item';
 
-                const itemHeight = project.width / project.aspectRatio;
-                item.style.width = project.width + 'px';
+                const scaledWidth = project.width * scale;
+                const itemHeight = scaledWidth / project.aspectRatio;
+                item.style.width = scaledWidth + 'px';
                 item.style.height = itemHeight + 'px';
                 item.dataset.parallaxStrength = (index % 3 + 1) * 0.100;
 
@@ -410,6 +424,73 @@ scrollContainer.addEventListener('wheel', (e) => {
     applyMomentum();
 }, { passive: false });
 
+// =============================================
+// TOUCH EVENTS (mobile/tablet)
+// =============================================
+// These mirror the mouse events above but read from
+// e.touches[0] instead of e.pageX/e.pageY.
+// Why a separate set? Touch events give you a TouchList
+// (multi-finger support), so the API is different.
+
+scrollContainer.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    isDragging = true;
+    hasMoved = false;
+    scrollContainer.classList.add('dragging');
+    startX = touch.pageX - scrollLeft;
+    startY = touch.pageY - scrollTop;
+    lastX = touch.pageX;
+    lastY = touch.pageY;
+    lastTime = Date.now();
+    velocityX = 0;
+    velocityY = 0;
+
+    if (animationId) {
+        cancelAnimationFrame(animationId);
+    }
+}, { passive: true });
+
+scrollContainer.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    // preventDefault empêche le scroll natif du navigateur
+    // (sinon la page bouge ET le canvas bouge = chaos)
+    e.preventDefault();
+
+    const touch = e.touches[0];
+    const now = Date.now();
+    const dt = now - lastTime;
+
+    const x = touch.pageX - startX;
+    const y = touch.pageY - startY;
+
+    const moveDistance = Math.abs(touch.pageX - lastX) + Math.abs(touch.pageY - lastY);
+    if (moveDistance > 5) {
+        hasMoved = true;
+    }
+
+    if (dt > 0) {
+        velocityX = (touch.pageX - lastX) / dt * 16;
+        velocityY = (touch.pageY - lastY) / dt * 16;
+    }
+
+    scrollLeft = x;
+    scrollTop = y;
+
+    wrapPosition();
+    canvas.style.transform = `translate(${scrollLeft}px, ${scrollTop}px)`;
+
+    lastX = touch.pageX;
+    lastY = touch.pageY;
+    lastTime = now;
+}, { passive: false }); // passive: false est obligatoire pour que preventDefault() fonctionne
+
+scrollContainer.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    scrollContainer.classList.remove('dragging');
+    applyMomentum();
+}, { passive: true });
+
 function wrapPosition() {
     if (scrollLeft > TILE_WIDTH / 2) {
         scrollLeft -= TILE_WIDTH;
@@ -453,25 +534,30 @@ function applyMomentum() {
 }
 
 // =============================================
-// PARALLAX
+// PARALLAX (desktop only — no mouse on touch devices)
 // =============================================
-document.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-});
+if (!isTouchDevice) {
+    document.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+}
 
 function animateParallax() {
-    currentMouseX += (mouseX - currentMouseX) * 0.1;
-    currentMouseY += (mouseY - currentMouseY) * 0.1;
+    // On touch devices, skip the parallax calculation entirely
+    if (!isTouchDevice) {
+        currentMouseX += (mouseX - currentMouseX) * 0.1;
+        currentMouseY += (mouseY - currentMouseY) * 0.1;
 
-    const items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        const strength = parseFloat(item.dataset.parallaxStrength);
-        const moveX = currentMouseX * strength * 100;
-        const moveY = currentMouseY * strength * 100;
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            const strength = parseFloat(item.dataset.parallaxStrength);
+            const moveX = currentMouseX * strength * 100;
+            const moveY = currentMouseY * strength * 100;
 
-        item.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
-    });
+            item.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+        });
+    }
 
     requestAnimationFrame(animateParallax);
 }
@@ -485,7 +571,7 @@ function openModal(project) {
         const videoId = item.replace('vimeo:', '');
         return `<div class="modal-gallery-item modal-video">
             <iframe src="https://player.vimeo.com/video/${videoId}"
-                width="711" height="400"
+                style="width: 100%; height: 100%;"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen>
@@ -545,3 +631,11 @@ document.addEventListener('keydown', (e) => {
 createFilterButtons();
 createItems();
 animateParallax();
+
+// Update instruction text for touch devices
+if (isTouchDevice) {
+    const instructions = document.querySelector('.instructions');
+    if (instructions) {
+        instructions.textContent = 'SWIPE TO MOVE · TAP TO FLIP';
+    }
+}

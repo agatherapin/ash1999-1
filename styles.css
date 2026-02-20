@@ -173,6 +173,7 @@ body {
     flex: 1;
     display: flex;
     position: relative;
+    touch-action: none; /* Empêche le navigateur de gérer le touch lui-même */
 }
 
 .scroll-container.dragging {
@@ -457,6 +458,14 @@ body {
     border-radius: 12px;
 }
 
+.modal-video {
+    min-width: 300px;
+}
+
+.modal-video iframe {
+    border-radius: 12px;
+}
+
 .modal-gallery::-webkit-scrollbar {
     height: 8px;
 }
@@ -469,4 +478,182 @@ body {
 .modal-gallery::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
+}
+
+/* =============================================
+   RESPONSIVE - TABLET (max-width: 768px)
+   ============================================= */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 16px;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    /* Filter */
+    .filter-toggle {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .filter-container {
+        max-width: 300px;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* Instructions */
+    .instructions {
+        font-size: 11px;
+        padding: 10px 18px;
+        bottom: 16px;
+    }
+
+    /* Cards — on réduit via un scale factor appliqué en JS,
+       mais on ajuste aussi le texte du back */
+    .back-title {
+        font-size: 20px;
+    }
+
+    .back-description {
+        font-size: 14px;
+    }
+
+    .view-more-btn {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    /* Modal */
+    .modal {
+        padding: 20px;
+    }
+
+    .modal-body {
+        padding: 40px 24px 24px 24px;
+    }
+
+    .modal-title {
+        font-size: 26px;
+    }
+
+    .modal-subtitle {
+        font-size: 16px;
+    }
+
+    .modal-gallery {
+        max-height: 350px;
+    }
+
+    .modal-gallery-item {
+        height: 300px;
+    }
+}
+
+/* =============================================
+   RESPONSIVE - PHONE (max-width: 480px)
+   ============================================= */
+@media (max-width: 480px) {
+    /* Header */
+    .header {
+        padding: 12px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    /* Filter */
+    .filter-container {
+        max-width: 260px;
+    }
+
+    .filter-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    /* Instructions */
+    .instructions {
+        font-size: 10px;
+        padding: 8px 14px;
+        bottom: 12px;
+    }
+
+    /* Cards back face */
+    .back-title {
+        font-size: 13px;
+    }
+
+    .back-description {
+        font-size: 10px;
+    }
+
+    .view-more-btn {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .card-back {
+        padding: 10px 12px;
+    }
+
+    /* Modal */
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        border-radius: 16px;
+    }
+
+    .modal-body {
+        padding: 36px 16px 16px 16px;
+    }
+
+    .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
+    }
+
+    .modal-title {
+        font-size: 22px;
+    }
+
+    .modal-subtitle {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .modal-tags {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+
+    .modal-tag {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .modal-gallery {
+        max-height: 280px;
+        gap: 8px;
+    }
+
+    .modal-gallery-item {
+        height: 240px;
+    }
+
+    .modal-video {
+        min-width: 260px;
+    }
 }
