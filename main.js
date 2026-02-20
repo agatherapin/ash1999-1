@@ -178,8 +178,6 @@ const modalClose = document.getElementById('modalClose');
 const fullscreenViewer = document.getElementById('fullscreenViewer');
 const fullscreenImg = document.getElementById('fullscreenImg');
 const fullscreenClose = document.getElementById('fullscreenClose');
-const fullscreenPrev = document.getElementById('fullscreenPrev');
-const fullscreenNext = document.getElementById('fullscreenNext');
 const fullscreenCounter = document.getElementById('fullscreenCounter');
 let fullscreenImages = [];  // Les URLs des images de la galerie courante
 let fullscreenIndex = 0;    // L'index de l'image actuellement affichée
@@ -209,7 +207,7 @@ let activeFilters = new Set(['all']);
 // On desktop the factor is 1 (no change). On phone it goes down to ~0.6
 function getCardScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 0.50;
+    if (w <= 480) return 0.4;
     if (w <= 768) return 0.55;
     return 1;
 }
@@ -688,8 +686,6 @@ function updateFullscreenImage() {
 }
 
 fullscreenClose.addEventListener('click', closeFullscreen);
-fullscreenPrev.addEventListener('click', () => navigateFullscreen(-1));
-fullscreenNext.addEventListener('click', () => navigateFullscreen(1));
 
 // Fermer en tapant sur le fond (pas sur l'image)
 fullscreenViewer.addEventListener('click', (e) => {

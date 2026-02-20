@@ -449,7 +449,7 @@ body {
 
 .modal-gallery-item img {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
     border-radius: 12px;
@@ -457,7 +457,7 @@ body {
 
 .modal-gallery-item video {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: contain;
     border-radius: 12px;
 }
@@ -543,31 +543,6 @@ body {
     font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
-.fullscreen-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fullscreen-prev {
-    left: 12px;
-}
-
-.fullscreen-next {
-    right: 12px;
-}
-
 /* =============================================
    RESPONSIVE - TABLET (max-width: 768px)
    ============================================= */
@@ -641,8 +616,6 @@ body {
 
     .modal-gallery-item {
         height: 300px;
-        width: 75vw;
-        flex: 0 0 75vw;
     }
 }
 
@@ -741,12 +714,6 @@ body {
 
     .modal-gallery-item {
         height: 240px;
-        width: 80vw;
-        flex: 0 0 80vw;
-    }
-
-    .modal-gallery-item img {
-        object-fit: contain;
     }
 
     .modal-video {
