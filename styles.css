@@ -642,11 +642,13 @@ body {
         font-size: 12px;
     }
 
-    /* Instructions */
-    .instructions {
-        font-size: 16px;
-        padding: 8px 14px;
-        bottom: 12px;
+        .instructions {
+            font-size: 11px;
+            /* était 16px */
+            padding: 8px 14px;
+            bottom: 12px;
+            white-space: nowrap;
+            /* empêche le retour à la ligne */
     }
 
     /* Cards back face */
