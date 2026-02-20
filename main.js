@@ -304,12 +304,9 @@ function filterItems() {
 // =============================================
 function createItems() {
     const scale = getCardScale();
-    
-    // Sur mobile : 4 tiles (2×2) au lieu de 9 (3×3) = moitié moins d'éléments DOM
-    const tileRange = isTouchDevice ? { min: 0, max: 1 } : { min: -1, max: 1 };
 
-    for (let tileY = tileRange.min; tileY <= tileRange.max; tileY++) {
-        for (let tileX = tileRange.min; tileX <= tileRange.max; tileX++) {
+    for (let tileY = -1; tileY <= 1; tileY++) {
+        for (let tileX = -1; tileX <= 1; tileX++) {
             projects.forEach((project, index) => {
                 const item = document.createElement('div');
                 item.className = 'item';
