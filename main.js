@@ -216,7 +216,7 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function getCanvasScale() {
     const w = window.innerWidth;
-    if (w <= 480) return 2.2;    // mobile : beaucoup d'espace pour éviter les chevauchements
+    if (w <= 480) return 1.8;    // mobile : beaucoup d'espace pour éviter les chevauchements
     if (w <= 768) return 1.8;    // tablette
     return 1;
 }
