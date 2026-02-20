@@ -485,6 +485,90 @@ body {
 }
 
 /* =============================================
+   FULLSCREEN IMAGE VIEWER (mobile gallery)
+   ============================================= */
+.fullscreen-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    touch-action: none;
+}
+
+.fullscreen-viewer.active {
+    display: flex;
+    opacity: 1;
+}
+
+.fullscreen-viewer img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.fullscreen-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.fullscreen-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-prev {
+    left: 12px;
+}
+
+.fullscreen-next {
+    right: 12px;
+}
+
+/* =============================================
    RESPONSIVE - TABLET (max-width: 768px)
    ============================================= */
 @media (max-width: 768px) {
@@ -662,7 +746,7 @@ body {
     }
 
     .modal-gallery-item img {
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .modal-video {

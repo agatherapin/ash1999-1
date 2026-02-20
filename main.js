@@ -174,6 +174,16 @@ const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modalBody');
 const modalClose = document.getElementById('modalClose');
 
+// Fullscreen viewer
+const fullscreenViewer = document.getElementById('fullscreenViewer');
+const fullscreenImg = document.getElementById('fullscreenImg');
+const fullscreenClose = document.getElementById('fullscreenClose');
+const fullscreenPrev = document.getElementById('fullscreenPrev');
+const fullscreenNext = document.getElementById('fullscreenNext');
+const fullscreenCounter = document.getElementById('fullscreenCounter');
+let fullscreenImages = [];  // Les URLs des images de la galerie courante
+let fullscreenIndex = 0;    // L'index de l'image actuellement affichée
+
 // =============================================
 // STATE
 // =============================================
@@ -604,6 +614,22 @@ function openModal(project) {
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Rendre les images de la galerie cliquables pour le fullscreen
+    // On filtre les items qui sont des images (pas des vidéos/iframes)
+    const imageOnlyUrls = project.gallery
+        ? project.gallery.filter(item => !item.startsWith('vimeo:') && !item.startsWith('video:'))
+        : [];
+
+    if (imageOnlyUrls.length > 0) {
+        const galleryItems = modalBody.querySelectorAll('.modal-gallery-item:not(.modal-video)');
+        galleryItems.forEach((item, i) => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', () => {
+                openFullscreen(imageOnlyUrls, i);
+            });
+        });
+    }
 }
 
 function closeModal() {
@@ -623,7 +649,66 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
     }
+    // Navigation clavier dans le viewer plein écran
+    if (fullscreenViewer.classList.contains('active')) {
+        if (e.key === 'Escape') closeFullscreen();
+        if (e.key === 'ArrowRight') navigateFullscreen(1);
+        if (e.key === 'ArrowLeft') navigateFullscreen(-1);
+    }
 });
+
+// =============================================
+// FULLSCREEN IMAGE VIEWER
+// =============================================
+// On stocke les images (seulement les images, pas les vidéos)
+// quand on ouvre la modale, puis on ouvre le viewer au tap.
+
+function openFullscreen(images, index) {
+    fullscreenImages = images;
+    fullscreenIndex = index;
+    updateFullscreenImage();
+    fullscreenViewer.classList.add('active');
+}
+
+function closeFullscreen() {
+    fullscreenViewer.classList.remove('active');
+}
+
+function navigateFullscreen(direction) {
+    fullscreenIndex += direction;
+    // Boucle : si on dépasse la fin, retour au début (et inversement)
+    if (fullscreenIndex >= fullscreenImages.length) fullscreenIndex = 0;
+    if (fullscreenIndex < 0) fullscreenIndex = fullscreenImages.length - 1;
+    updateFullscreenImage();
+}
+
+function updateFullscreenImage() {
+    fullscreenImg.src = fullscreenImages[fullscreenIndex];
+    fullscreenCounter.textContent = `${fullscreenIndex + 1} / ${fullscreenImages.length}`;
+}
+
+fullscreenClose.addEventListener('click', closeFullscreen);
+fullscreenPrev.addEventListener('click', () => navigateFullscreen(-1));
+fullscreenNext.addEventListener('click', () => navigateFullscreen(1));
+
+// Fermer en tapant sur le fond (pas sur l'image)
+fullscreenViewer.addEventListener('click', (e) => {
+    if (e.target === fullscreenViewer) closeFullscreen();
+});
+
+// Swipe gauche/droite pour naviguer dans le viewer
+let fsStartX = 0;
+fullscreenViewer.addEventListener('touchstart', (e) => {
+    fsStartX = e.touches[0].clientX;
+}, { passive: true });
+
+fullscreenViewer.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].clientX - fsStartX;
+    // Un swipe de plus de 50px déclenche la navigation
+    if (Math.abs(diff) > 50) {
+        navigateFullscreen(diff > 0 ? -1 : 1);
+    }
+}, { passive: true });
 
 // =============================================
 // INIT
