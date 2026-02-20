@@ -644,22 +644,22 @@ body {
 
     /* Instructions */
     .instructions {
-        font-size: 10px;
+        font-size: 16px;
         padding: 8px 14px;
         bottom: 12px;
     }
 
     /* Cards back face */
     .back-title {
-        font-size: 13px;
+        font-size: 20px;
     }
 
     .back-description {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .view-more-btn {
-        font-size: 10px;
+        font-size: 16px;
         padding: 4px;
     }
 
@@ -689,11 +689,11 @@ body {
     }
 
     .modal-title {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .modal-subtitle {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 14px;
     }
 
@@ -704,7 +704,7 @@ body {
 
     .modal-tag {
         padding: 4px 10px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .modal-gallery {
