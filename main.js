@@ -9,8 +9,19 @@ const projects = [
         // Note: fullDescription is defined here but not currently used
         fullDescription: 'Ce projet explore la typographie moderne à travers un glossaire complet. Chaque terme est illustré avec des exemples visuels et des explications détaillées pour faciliter la compréhension.',
         tags: ['Branding'],
-        image: 'img/RARE stage/back-scan-couture.webp',
-        gallery: ['img/RARE stage/Print rapport-6.webp', 'img/RARE stage/Print rapport-5.webp', 'img/RARE stage/Print rapport-11.webp', 'img/RARE stage/Print rapport-13.webp', 'img/RARE stage/Print rapport-9.webp', 'img/RARE stage/tee noir rare stretch.webp'],
+        image: 'img/rare-stage/back-cover.webp',
+        gallery: [
+            'img/rare-stage/front-cover.webp', 'img/rare-stage/rapport-front-back.webp', 
+            'img/rare-stage/planche-logo-finale.webp', 'img/rare-stage/mockup-tee-stretch.webp', 
+            'img/rare-stage/mockup-tee-outline.webp', 'img/rare-stage/planche-logo-test.webp', 
+            'img/rare-stage/rapport-moodboard.webp', 'img/rare-stage/rapport-problematique.webp',
+            'img/rare-stage/rapport-1.webp', 'img/rare-stage/rapport-2.webp',
+            'img/rare-stage/rapport-3.webp', 'img/rare-stage/rapport-4.webp',
+            'img/rare-stage/rapport-5.webp', 'img/rare-stage/rapport-6.webp',
+            'img/rare-stage/rapport-7.webp', 'img/rare-stage/rapport-8.webp',
+            'img/rare-stage/rapport-9.webp'
+        ],
+
         width: 240,
         aspectRatio: 0.7,
         top: 45,
@@ -21,8 +32,8 @@ const projects = [
         subtitle: 'Jan 2024',
         description: 'Trifold brochure to promote a fictional festival around rap music. Suburban is the name of a fictitious organization about urban culture, streetwear & rap music.',
         tags: ['Branding', 'Print', 'Typography'],
-        image: 'img/Suburban/2.gif',
-        gallery: ['img/Suburban/exterieur-mockup-suburban.webp', 'img/Suburban/interieur-mockup-suburban.webp', 'img/Suburban/Logo Suburban.webp'],
+        image: 'img/suburban/titre-motion.gif',
+        gallery: ['img/suburban/exterieur-mockup-suburban.webp', 'img/suburban/interieur-mockup-suburban.webp', 'img/suburban/logo.webp'],
         width: 240,
         aspectRatio: 0.8,
         top: 8,
