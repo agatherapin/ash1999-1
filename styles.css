@@ -350,9 +350,9 @@ body {
 }
 
 .modal-content {
-    background-color: rgba(11, 11, 11, 0.864);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(25, 25, 25, 0.92);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     border-radius: 24px;
     max-width: 1200px;
     width: 100%;
