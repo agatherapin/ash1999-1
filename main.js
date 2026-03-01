@@ -597,7 +597,7 @@ function openModal(project) {
     if (item.startsWith('vimeo:')) {
     const videoId = item.replace('vimeo:', '');
     return `<div class="modal-gallery-item modal-video">
-        <iframe src="https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+        <iframe src="https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1"
             style="width: 100%; height: 100%;"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
