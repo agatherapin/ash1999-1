@@ -165,7 +165,7 @@ const projects = [
         subtitle: 'December 2025',
         description: 'Short video to promote the Wall Mounted CD Player from Muji.',
         tags: ['Motion Design'],
-        image: 'vimeo:1169377028',
+        image: 'img/cover-motion.gif',
         gallery: ['vimeo:1169377028'],
         width: 290,
         aspectRatio: 1.5,
