@@ -58,7 +58,7 @@ const projects = [
         description: 'The aim of this workshop was to create a brand new, fun and attractive design for this extraordinary game!',
         tags: ['Packaging', 'Branding', 'Print'],
         image: 'img/Skyjo/skyjo 2.webp',
-        gallery: ['img/Skyjo/cartes.webp', 'img/Skyjo/exterieur.webp', 'img/Skyjo/full.webp', 'img/Skyjo/boite.webp'],
+        gallery: ['img/Skyjo/cartes.webp', 'img/Skyjo/exterieur.webp', 'img/Skyjo/full.webp', 'img/Skyjo/boite.webp','img/Skyjo/skyjo 2.webp'],
         width: 240,
         aspectRatio: 0.8,
         top: 55,
