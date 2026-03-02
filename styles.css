@@ -243,9 +243,7 @@ body {
 
 .card-back {
     transform: rotateY(180deg);
-    background-color: rgba(255, 255, 255, 0.088);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.151);
     padding: 20px 24px;
     display: flex;
     flex-direction: column;
@@ -334,7 +332,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.015);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 200;
     display: none;
     align-items: center;
@@ -350,9 +348,7 @@ body {
 }
 
 .modal-content {
-    background-color: rgba(25, 25, 25, 0.92);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    background-color: rgba(14, 14, 14, 0.946);
     border-radius: 24px;
     max-width: 1200px;
     width: 100%;
