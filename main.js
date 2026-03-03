@@ -1,178 +1,4 @@
-// =============================================
-// DATA - Projects
-// =============================================
-const projects = [
-    {
-        title: 'Internship with PMF music label',
-        subtitle: 'Jan to March 2025',
-        description: 'Created logo and mockups for ThaHomey brand: Rare.',
-        // Note: fullDescription is defined here but not currently used
-        fullDescription: 'Ce projet explore la typographie moderne à travers un glossaire complet. Chaque terme est illustré avec des exemples visuels et des explications détaillées pour faciliter la compréhension.',
-        tags: ['Branding'],
-        image: 'img/rare-stage/back-cover.webp',
-        gallery: [
-            'img/rare-stage/front-cover.webp', 'img/rare-stage/rapport-front-back.webp', 
-            'img/rare-stage/planche-logo-finale.webp', 'img/rare-stage/mockup-tee-stretch.webp', 
-            'img/rare-stage/mockup-tee-outline.webp', 'img/rare-stage/planche-logo-test.webp', 
-            'img/rare-stage/rapport-moodboard.webp', 'img/rare-stage/rapport-problematique.webp',
-            'img/rare-stage/rapport-1.webp', 'img/rare-stage/rapport-2.webp',
-            'img/rare-stage/rapport-3.webp', 'img/rare-stage/rapport-4.webp',
-            'img/rare-stage/rapport-5.webp', 'img/rare-stage/rapport-6.webp',
-            'img/rare-stage/rapport-7.webp', 'img/rare-stage/rapport-8.webp',
-            'img/rare-stage/rapport-9.webp'
-        ],
-
-        width: 240,
-        aspectRatio: 0.7,
-        top: 45,
-        left: 60
-    },
-    {
-        title: 'Suburban',
-        subtitle: 'Jan 2024',
-        description: 'Trifold brochure to promote a fictional festival around rap music. Suburban is the name of a fictitious organization about urban culture, streetwear & rap music.',
-        tags: ['Branding', 'Print', 'Typography'],
-        image: 'img/suburban/titre-motion.gif',
-        gallery: ['img/suburban/exterieur-mockup-suburban.webp', 'img/suburban/interieur-mockup-suburban.webp', 'img/suburban/logo.webp'],
-        width: 240,
-        aspectRatio: 0.8,
-        top: 8,
-        left: 50
-    },
-    {
-        title: 'Happy Birthday lettering',
-        subtitle: 'Jan 2024',
-        description: 'Inspired by Copperlate alphabet',
-        tags: ['Typography'],
-        image: 'img/typographie/hbd-procreate.webp',
-        gallery: ['img/typographie/hbd-manual.webp', 'img/typographie/hbd-procreate.webp'],
-        width: 280,
-        aspectRatio: 1,
-        top: 80,
-        left: 55
-    },
-    {
-        title: 'Wandanlage',
-        subtitle: 'June 2024',
-        description: 'As a great fan of Dieter Rams work, I decided to dedicate this webdesign project to the wall unit he designed for Braun in the 60s.',
-        tags: ['Web Design'],
-        image: 'img/wandanlage/cover-landing-page.webp',
-        gallery: ['vimeo:1166411109', 'img/wandanlage/page-close-up-platine.webp', 'img/wandanlage/page-previsualisation.webp', 'img/wandanlage/page-404.webp', 'img/wandanlage/scroll-horizontal.webp', 'img/wandanlage/footer.webp'],
-        width: 340,
-        aspectRatio: 1.7,
-        top: 65,
-        left: 74
-    },
-    {
-        title: 'Skyjo',
-        subtitle: 'April 2025',
-        description: 'The aim of this workshop was to create a brand new, fun and attractive design for this extraordinary game!',
-        tags: ['Packaging', 'Branding', 'Print'],
-        image: 'img/skyjo/jeu-complet-cover.webp',
-        gallery: ['img/skyjo/jeu-entier.webp', 'img/skyjo/packaging.webp', 'img/skyjo/mise-en-scene.webp', 'img/skyjo/cartes.webp', 'img/skyjo/jeu-complet-range.webp','img/skyjo/detail-packaging.webp'],
-        width: 240,
-        aspectRatio: 0.8,
-        top: 55,
-        left: 92
-    },
-    {
-        title: 'Interférences exhibition',
-        subtitle: 'November 2024',
-        description: 'The Interférences exhibition revolves around mapping and motion design, and showcases the work of third-year motion design students at E-artsup.',
-        tags: ['Branding', 'Print', 'Motion Design'],
-        image: 'img/interferences/motion-interferences.gif',
-        gallery: ['img/interferences/affiche-la-cale.webp', 'img/interferences/affiche-interferences.webp', 'img/interferences/flyer-face.webp', 'img/interferences/flyer-verso.webp', 'img/interferences/motion-interferences.gif'],
-        width: 240,
-        aspectRatio: 0.7,
-        top: 17,
-        left: 20
-    },
-    {
-        title: 'Typographic Lexicon',
-        subtitle: 'October 2023',
-        description: 'This lexicon is designed to help students learn about typography. It covers the essentials of typographic vocabulary and technical terms, and traces the history of typefaces.',
-        tags: ['Typography', 'Print'],
-        image: 'img/lexique-typographique/cover.webp',
-        gallery: [
-            'img/lexique-typographique/cover.webp', 'img/lexique-typographique/sommaire.webp', 
-            'img/lexique-typographique/lexique-typo-1.webp', 'img/lexique-typographique/lexique-typo-2.webp',
-            'img/lexique-typographique/lexique-typo-3.webp', 'img/lexique-typographique/lexique-typo-4.webp',
-            'img/lexique-typographique/lexique-typo-5.webp', 'img/lexique-typographique/lexique-typo-6.webp',
-            'img/lexique-typographique/lexique-typo-7.webp', 'img/lexique-typographique/lexique-typo-8.webp',
-            'img/lexique-typographique/lexique-typo-9.webp', 'img/lexique-typographique/lexique-typo-10.webp',
-            'img/lexique-typographique/lexique-typo-12.webp', 'img/lexique-typographique/lexique-typo-15.webp',
-        ],
-        width: 340,
-        aspectRatio: 1.3,
-        top: 70,
-        left: 33
-    },
-    {
-        title: 'Pick your poison, Art cover',
-        subtitle: 'December 2025',
-        description: 'Fictional cover made with playdough for the amazing song pick your poison, by Killowen.',
-        tags: ['Music', 'Mix media', 'Typography'],
-        image: 'img/pick-your-poison/cover.webp',
-        gallery: ['img/pick-your-poison/cover.webp', 'img/pick-your-poison/head-dead.webp', 'img/pick-your-poison/head-heart.webp', 'img/pick-your-poison/mockup-cover.webp'],
-        width: 330,
-        aspectRatio: 1.0,
-        top: 87,
-        left: 1
-    },
-    {
-        title: 'Poster Bushi - Batman',
-        subtitle: '2024',
-        description: 'Using Carta Nueva font from Sharp Type',
-        tags: ['Music'],
-        image: 'img/music-visuals/poster-bushi-batman.webp',
-        gallery: ['img/music-visuals/poster-bushi-batman.webp', 'img/music-visuals/cd-mockup-bushi-batman.webp', 'img/music-visuals/jolagreen-poster.webp'],
-        width: 240,
-        aspectRatio: 0.707,
-        top: 32,
-        left: 5
-    },
-    {
-        title: 'Drawing gallery',
-        subtitle: '2024',
-        description: 'Collection de travaux et dessins variés.',
-        tags: ['Illustration'],
-        image: 'img/dessins/astronaute.webp',
-        gallery: [
-            'img/dessins/jardin-des-plantes.webp', 'img/dessins/japan_street.webp',
-            'img/dessins/astronaute.webp', 'img/dessins/metropolitan.webp',
-            'img/dessins/samourai.webp', 'img/dessins/profil-encre-de-chine.webp',
-            'img/dessins/tombeau-des-lucioles.webp'
-        ],
-        width: 240,
-        aspectRatio: 0.707,
-        top: 32,
-        left: 36
-    },
-    {
-        title: 'Homemade books',
-        subtitle: 'November 2025',
-        description: 'I crafted this paper myself from scratch and painted the cover with acrylic paint. Everything is made by hand.',
-        tags: ['Mix media', 'Illustration'],
-        image: 'img/early-dinner-front.webp',
-        gallery: ['img/early-dinner-front.webp', 'img/early-dinner-back.webp'],
-        width: 290,
-        aspectRatio: 1.3,
-        top: 20,
-        left: 85
-    },
-    {
-        title: 'Motion for Muji',
-        subtitle: 'December 2025',
-        description: 'Short video to promote the Wall Mounted CD Player from Muji.',
-        tags: ['Motion Design'],
-        image: 'img/cover-motion.gif',
-        gallery: ['vimeo:1169377028'],
-        width: 290,
-        aspectRatio: 1.5,
-        top: 90,
-        left: 80
-    }
-];
+import { projects } from "./modules/projects.js";
 
 // =============================================
 // DOM REFERENCES
@@ -213,6 +39,14 @@ let mouseY = 0;
 let currentMouseX = 0;
 let currentMouseY = 0;
 let activeFilters = new Set(['all']);
+let itemsCache = [];
+let dragRafPending = false;
+let parallaxX = 0;
+let parallaxY = 0;
+
+function updateCanvasTransform() {
+    canvas.style.transform = `translate(${scrollLeft + parallaxX}px, ${scrollTop + parallaxY}px)`;
+}
 
 // Responsive: scale cards down on smaller screens
 // On desktop the factor is 1 (no change). On phone it goes down to ~0.6
@@ -235,6 +69,78 @@ function getCanvasScale() {
 const canvasScale = getCanvasScale();
 const TILE_WIDTH = (window.innerWidth + 300) * canvasScale;
 const TILE_HEIGHT = (window.innerHeight + 300) * canvasScale;
+
+// =============================================
+// PERF MONITOR — retirer en production
+// =============================================
+const perf = {
+    drag:     { count: 0, total: 0, max: 0 },
+    parallax: { count: 0, total: 0, max: 0 },
+    momentum: { count: 0, total: 0, max: 0 },
+    fps:      { count: 0, last: performance.now() },
+    slowFrames: 0,
+};
+
+const _fmt = o => o.count
+    ? `${String(o.count).padStart(4)} appels | avg ${(o.total / o.count).toFixed(3)}ms | max ${o.max.toFixed(3)}ms`
+    : '     —';
+
+function _perfReport() {
+    const now = performance.now();
+    const elapsed = (now - perf.fps.last) / 1000;
+    if (elapsed < 2) return;
+
+    const fps = Math.round(perf.fps.count / elapsed);
+    const fpsColor = fps >= 55 ? '#4ade80' : fps >= 30 ? '#facc15' : '#f87171';
+
+    console.group(`%c[PERF] FPS: ${fps}  |  slow frames: ${perf.slowFrames}`, `color:${fpsColor};font-weight:bold`);
+    console.log(`drag (RAF write) : ${_fmt(perf.drag)}`);
+    console.log(`parallax RAF     : ${_fmt(perf.parallax)}`);
+    console.log(`momentum RAF     : ${_fmt(perf.momentum)}`);
+
+    // Diagnostic automatique
+    if (fps < 55) {
+        const jsMax = Math.max(perf.drag.max, perf.parallax.max, perf.momentum.max);
+        if (jsMax < 2) {
+            console.warn('%c⚠ JS rapide (<2ms) mais FPS bas → goulot CSS/rendu (paint, composite, GIFs, backdrop-filter)', 'color:#fb923c');
+        } else {
+            const top = [
+                { name: 'drag',     v: perf.drag.max },
+                { name: 'parallax', v: perf.parallax.max },
+                { name: 'momentum', v: perf.momentum.max },
+            ].sort((a, b) => b.v - a.v)[0];
+            console.warn(`%c⚠ Goulot JS probable → "${top.name}" (max ${top.v.toFixed(3)}ms)`, 'color:#f87171;font-weight:bold');
+        }
+    }
+    console.groupEnd();
+
+    perf.drag.count     = perf.drag.total     = perf.drag.max     = 0;
+    perf.parallax.count = perf.parallax.total = perf.parallax.max = 0;
+    perf.momentum.count = perf.momentum.total = perf.momentum.max = 0;
+    perf.slowFrames = 0;
+    perf.fps.count = 0;
+    perf.fps.last = now;
+}
+
+let _prevFrameTime = performance.now();
+(function _fpsLoop() {
+    const now = performance.now();
+    const frameDt = now - _prevFrameTime;
+    _prevFrameTime = now;
+
+    perf.fps.count++;
+
+    if (frameDt > 20) {
+        perf.slowFrames++;
+        console.warn(
+            `%c[SLOW FRAME +${frameDt.toFixed(1)}ms] drag:${isDragging} | momentum:${animationId !== null} | parallax:${parallaxRafId !== null}`,
+            'color:#fb923c;font-weight:bold'
+        );
+    }
+
+    _perfReport();
+    requestAnimationFrame(_fpsLoop);
+})();
 
 // =============================================
 // FILTERS
@@ -297,15 +203,10 @@ function updateFilterButtons() {
 }
 
 function filterItems() {
-    const items = document.querySelectorAll('.item');
-
-    items.forEach((item, index) => {
-        const projectIndex = index % projects.length;
-        const project = projects[projectIndex];
-
+    itemsCache.forEach((item, index) => {
+        const project = projects[index % projects.length];
         const shouldShow = activeFilters.has('all') ||
                           project.tags.some(tag => activeFilters.has(tag));
-
         item.classList.toggle('hidden', !shouldShow);
     });
 }
@@ -318,7 +219,7 @@ function createItems() {
 
     for (let tileY = -1; tileY <= 1; tileY++) {
         for (let tileX = -1; tileX <= 1; tileX++) {
-            projects.forEach((project, index) => {
+            projects.forEach((project) => {
                 const item = document.createElement('div');
                 item.className = 'item';
 
@@ -326,7 +227,6 @@ function createItems() {
                 const itemHeight = scaledWidth / project.aspectRatio;
                 item.style.width = scaledWidth + 'px';
                 item.style.height = itemHeight + 'px';
-                item.dataset.parallaxStrength = (index % 3 + 1) * 0.100;
 
                 const baseTop = (project.top / 100) * TILE_HEIGHT;
                 const baseLeft = (project.left / 100) * TILE_WIDTH;
@@ -341,7 +241,7 @@ function createItems() {
                     <div class="item-card" style="aspect-ratio: ${project.aspectRatio};">
                         <div class="card-face card-front">
                             <div class="item-image">
-                                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                                <div class="img-placeholder" data-src="${project.image}"></div>
                                 <div class="overlay">
                                     <h3>${project.title}</h3>
                                     <div class="date">${project.subtitle}</div>
@@ -370,6 +270,7 @@ function createItems() {
                 });
 
                 canvas.appendChild(item);
+                itemsCache.push(item);
             });
         }
     }
@@ -395,6 +296,16 @@ scrollContainer.addEventListener('mousedown', (e) => {
     }
 });
 
+function _applyDragTransform() {
+    const _t0 = performance.now();
+    updateCanvasTransform();
+    dragRafPending = false;
+    const _elapsed = performance.now() - _t0;
+    perf.drag.count++;
+    perf.drag.total += _elapsed;
+    if (_elapsed > perf.drag.max) perf.drag.max = _elapsed;
+}
+
 document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     e.preventDefault();
@@ -406,9 +317,7 @@ document.addEventListener('mousemove', (e) => {
     const y = e.pageY - startY;
 
     const moveDistance = Math.abs(e.pageX - lastX) + Math.abs(e.pageY - lastY);
-    if (moveDistance > 5) {
-        hasMoved = true;
-    }
+    if (moveDistance > 5) hasMoved = true;
 
     if (dt > 0) {
         velocityX = (e.pageX - lastX) / dt * 16;
@@ -417,13 +326,16 @@ document.addEventListener('mousemove', (e) => {
 
     scrollLeft = x;
     scrollTop = y;
-
-    wrapPosition();
-    canvas.style.transform = `translate(${scrollLeft}px, ${scrollTop}px)`;
+    wrapPosition(); // JS pur — pas de DOM, synchrone OK
 
     lastX = e.pageX;
     lastY = e.pageY;
     lastTime = now;
+
+    if (!dragRafPending) {
+        dragRafPending = true;
+        requestAnimationFrame(_applyDragTransform);
+    }
 });
 
 document.addEventListener('mouseup', () => {
@@ -443,7 +355,7 @@ scrollContainer.addEventListener('wheel', (e) => {
     velocityY = -e.deltaY * 0.5;
 
     wrapPosition();
-    canvas.style.transform = `translate(${scrollLeft}px, ${scrollTop}px)`;
+    updateCanvasTransform();
 
     if (animationId) {
         cancelAnimationFrame(animationId);
@@ -502,13 +414,16 @@ scrollContainer.addEventListener('touchmove', (e) => {
 
     scrollLeft = x;
     scrollTop = y;
-
-    wrapPosition();
-    canvas.style.transform = `translate(${scrollLeft}px, ${scrollTop}px)`;
+    wrapPosition(); // JS pur — pas de DOM, synchrone OK
 
     lastX = touch.pageX;
     lastY = touch.pageY;
     lastTime = now;
+
+    if (!dragRafPending) {
+        dragRafPending = true;
+        requestAnimationFrame(_applyDragTransform);
+    }
 }, { passive: false }); // passive: false est obligatoire pour que preventDefault() fonctionne
 
 scrollContainer.addEventListener('touchend', () => {
@@ -542,6 +457,7 @@ function applyMomentum() {
 
     function animate() {
         if (Math.abs(velocityX) > threshold || Math.abs(velocityY) > threshold) {
+            const _t0 = performance.now();
             velocityX *= friction;
             velocityY *= friction;
 
@@ -549,8 +465,12 @@ function applyMomentum() {
             scrollTop += velocityY;
 
             wrapPosition();
-            canvas.style.transform = `translate(${scrollLeft}px, ${scrollTop}px)`;
+            updateCanvasTransform();
 
+            const _elapsed = performance.now() - _t0;
+            perf.momentum.count++;
+            perf.momentum.total += _elapsed;
+            if (_elapsed > perf.momentum.max) perf.momentum.max = _elapsed;
             animationId = requestAnimationFrame(animate);
         } else {
             animationId = null;
@@ -563,30 +483,45 @@ function applyMomentum() {
 // =============================================
 // PARALLAX (desktop only — no mouse on touch devices)
 // =============================================
+let parallaxRafId = null;
+const PARALLAX_STRENGTH = 20; // décalage max en px sur le canvas entier
+
+function animateParallax() {
+    if (isDragging) {
+        parallaxRafId = null;
+        return;
+    }
+
+    const _t0 = performance.now();
+
+    currentMouseX += (mouseX - currentMouseX) * 0.08;
+    currentMouseY += (mouseY - currentMouseY) * 0.08;
+
+    parallaxX = currentMouseX * PARALLAX_STRENGTH;
+    parallaxY = currentMouseY * PARALLAX_STRENGTH;
+    updateCanvasTransform(); // 1 seul write DOM
+
+    const _elapsed = performance.now() - _t0;
+    perf.parallax.count++;
+    perf.parallax.total += _elapsed;
+    if (_elapsed > perf.parallax.max) perf.parallax.max = _elapsed;
+
+    const settled = Math.abs(mouseX - currentMouseX) < 0.001 && Math.abs(mouseY - currentMouseY) < 0.001;
+    if (!settled) {
+        parallaxRafId = requestAnimationFrame(animateParallax);
+    } else {
+        parallaxRafId = null;
+    }
+}
+
 if (!isTouchDevice) {
     document.addEventListener('mousemove', (e) => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        if (!isDragging && !parallaxRafId) {
+            parallaxRafId = requestAnimationFrame(animateParallax);
+        }
     });
-}
-
-function animateParallax() {
-    // On touch devices, skip the parallax calculation entirely
-    if (!isTouchDevice) {
-        currentMouseX += (mouseX - currentMouseX) * 0.1;
-        currentMouseY += (mouseY - currentMouseY) * 0.1;
-
-        const items = document.querySelectorAll('.item');
-        items.forEach(item => {
-            const strength = parseFloat(item.dataset.parallaxStrength);
-            const moveX = currentMouseX * strength * 100;
-            const moveY = currentMouseY * strength * 100;
-
-            item.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
-        });
-    }
-
-    requestAnimationFrame(animateParallax);
 }
 
 // =============================================
@@ -727,11 +662,121 @@ fullscreenViewer.addEventListener('touchend', (e) => {
 }, { passive: true });
 
 // =============================================
+// ASYNC IMAGE LOADING WITH PLACEHOLDERS
+// =============================================
+// Each unique cover image is decoded exactly once (off-main-thread via img.decode()).
+// All 9 tile copies that share the same URL are swapped simultaneously when ready.
+// → The main thread is never blocked by image decode during scroll/drag.
+
+function swapPlaceholders(src) {
+    itemsCache.forEach(item => {
+        const placeholder = item.querySelector(`.img-placeholder[data-src="${src}"]`);
+        if (!placeholder) return;
+        const img = new Image();
+        img.src = src;
+        img.decoding = 'async';
+        img.classList.add('img-fade-in');
+        placeholder.replaceWith(img);
+    });
+}
+
+function loadImagesAsync() {
+    const urls = new Set(projects.map(p => p.image));
+    let loaded = 0;
+    const total = urls.size;
+
+    urls.forEach(src => {
+        if (src.endsWith('.gif')) {
+            // GIFs: decode() is meaningless for animated images — use onload instead
+            const img = new Image();
+            img.onload = () => {
+                loaded++;
+                console.log(`[ASYNC IMG] ✓ ${loaded}/${total} gif — ${src.split('/').pop()}`);
+                swapPlaceholders(src);
+            };
+            img.onerror = () => swapPlaceholders(src);
+            img.src = src;
+        } else {
+            const img = new Image();
+            img.src = src;
+            img.decode()
+                .then(() => {
+                    loaded++;
+                    console.log(`[ASYNC IMG] ✓ ${loaded}/${total} — ${src.split('/').pop()}`);
+                    swapPlaceholders(src);
+                })
+                .catch(() => {
+                    // Show the image anyway (browser error state) — never leave a blank placeholder
+                    swapPlaceholders(src);
+                });
+        }
+    });
+}
+
+// =============================================
+// PRELOAD
+// =============================================
+
+// PerformanceObserver : log chaque image réellement fetchée (réseau vs cache)
+if (window.PerformanceObserver) {
+    const _imgObserver = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
+            if (!entry.name.match(/\.(webp|gif|jpg|jpeg|png|svg)(\?|$)/i)) return;
+            const filename  = entry.name.split('/').pop();
+            const fromCache = entry.transferSize === 0;
+            const size      = fromCache ? 'cache' : `${(entry.encodedBodySize / 1024).toFixed(1)} KB`;
+            console.log(
+                `%c[IMG] ${fromCache ? '📦' : '🌐'} ${filename.padEnd(45)} ${size.padStart(10)}  ${entry.duration.toFixed(0)}ms`,
+                fromCache ? 'color:#6b7280' : 'color:#60a5fa'
+            );
+        });
+    });
+    _imgObserver.observe({ type: 'resource', buffered: true });
+}
+
+function preloadImages() {
+    // Only preload gallery images — covers are handled by loadImagesAsync() (placeholder system)
+    const urls = new Set();
+    projects.forEach(p => {
+        if (p.gallery) {
+            p.gallery.forEach(src => {
+                if (!src.startsWith('vimeo:') && !src.startsWith('video:') && !src.endsWith('.gif')) urls.add(src);
+            });
+        }
+    });
+
+    console.log(`[PRELOAD] ${urls.size} gallery images à pré-décoder`);
+    let decoded = 0;
+    let failed  = 0;
+    const total = urls.size;
+
+    urls.forEach(src => {
+        const img = new Image();
+        // img.decode() : charge ET décode les pixels hors main thread
+        // → quand l'image apparaît à l'écran, zéro travail de décodage à faire
+        img.src = src;
+        img.decode()
+            .then(() => {
+                decoded++;
+                const pct = Math.round(decoded / total * 100);
+                console.log(`[PRELOAD] ✓ ${decoded}/${total} (${pct}%) — ${src.split('/').pop()}`);
+            })
+            .catch(() => {
+                failed++;
+                console.warn(`[PRELOAD] ✗ Échec décode : ${src}`);
+            });
+    });
+}
+
+// =============================================
 // INIT
 // =============================================
 createFilterButtons();
+console.time('[PERF] createItems');
 createItems();
-animateParallax();
+console.timeEnd('[PERF] createItems');
+loadImagesAsync();   // covers: decode once per URL off-main-thread, swap all 9 tiles when ready
+preloadImages();     // gallery images: pre-decode so modal opens instantly
 
 // Update instruction text for touch devices
 if (isTouchDevice) {
